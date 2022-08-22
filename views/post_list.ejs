@@ -36,12 +36,12 @@
     <% }); %>
 </ol>
 
-<!-- <%if (next) { %>
-    <a href="<%= next %>">Next</a>
+<%if (postList.next) { %>
+    <a href="<%= postList.next %>">Next</a>
 <% } %>
-<%if (previous) { %>
-    <a href="<%= previous %>">Previous</a>
-<% } %> -->
+<%if (postList.previous) { %>
+    <a href="<%= postList.previous %>">Previous</a>
+<% } %>
 
 </body>
 <%- include('_footer') -%>
