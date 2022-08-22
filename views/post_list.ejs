@@ -15,26 +15,34 @@
                 posted by: <%= post.postedBy.username%>
             </p>
 
-            <p>
+            <ul>
                 liked by: <% post.likedBy.forEach(function(user) {%>
                     <li>
                         <%= user.username %>
                     </li>
                     <%}); %>
-            </p>
+            </ul>
 
-            <p>
+            <ul>
                 disliked by: <% post.dislikedBy.forEach(function(user) {%>
                     <li>
                         <%= user.username %>
                     </li>
                     <%}); %>
-            </p>
+                </ul>
 
             
         </li>
     <% }); %>
 </ol>
+
+<!-- <%if (next) { %>
+    <a href="<%= next %>">Next</a>
+<% } %>
+<%if (previous) { %>
+    <a href="<%= previous %>">Previous</a>
+<% } %> -->
+
 </body>
 <%- include('_footer') -%>
 </html>
