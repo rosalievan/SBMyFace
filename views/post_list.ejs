@@ -15,6 +15,22 @@
                 posted by: <%= post.postedBy.username%>
             </p>
 
+            <p>
+                liked by: <% post.likedBy.forEach(function(user) {%>
+                    <li>
+                        <%= user.username %>
+                    </li>
+                    <%}); %>
+            </p>
+
+            <p>
+                disliked by: <% post.dislikedBy.forEach(function(user) {%>
+                    <li>
+                        <%= user.username %>
+                    </li>
+                    <%}); %>
+            </p>
+
             
         </li>
     <% }); %>
