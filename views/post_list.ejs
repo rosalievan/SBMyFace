@@ -1,47 +1,69 @@
 <html lang="en-gb">
+
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1>Posts</h1>
-<ol>
-    <% postList.results.forEach(function(post) {%>
-        <li>
-            <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
+<div class = 'container'>
+<div class = 'main'>
+    <h1 class = 'pagename'>Posts</h1>
+    <!-- <form method = "post">
+        <button type = 'text'> Like</button>
+    
+    </form> -->
+    <ul class = 'postlist'>
+        <% postList.results.forEach(function(post) {%>
+            <li class = 'post'>
+                <img src = <%= post.imageUrl %> class = 'image'>
 
-            
-            <img src = <%= post.imageUrl %>>
+                <div class="postinfo">
+                    <h2>
+                        <%= post.postedBy.username%>
+                    </h2>
 
-            <p>
-                posted by: <%= post.postedBy.username%>
-            </p>
+                    <p class><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %> </p>
 
-            <ul>
-                liked by: <% post.likedBy.forEach(function(user) {%>
-                    <li>
-                        <%= user.username %>
-                    </li>
-                    <%}); %>
-            </ul>
+                    <p class><%= post.message %> </p>
 
-            <ul>
-                disliked by: <% post.dislikedBy.forEach(function(user) {%>
-                    <li>
-                        <%= user.username %>
-                    </li>
-                    <%}); %>
-                </ul>
+                    <div class = 'likecount'>
+                        <ul >
+                            <p class = 'liked'>Liked by:</p> <% post.likedBy.forEach(function(user) {%>
+                                <li class = 'likes'>
+                                    <%= user.username %>
+                                </li>
+                                <%}); %>
+                        </ul>
 
-            
-        </li>
-    <% }); %>
-</ol>
+                        <ul>
+                            <p class = 'disliked'>Disliked by:</p> <% post.dislikedBy.forEach(function(user) {%>
+                                <li class = 'dislikes'>
+                                    <%= user.username %>
+                                </li>
+                                <%}); %>
+                        </ul>
 
-<%if (postList.next) { %>
-    <a href="<%= postList.next %>">Next</a>
-<% } %>
-<%if (postList.previous) { %>
-    <a href="<%= postList.previous %>">Previous</a>
-<% } %>
+                        <form method = "post" action = "<%= `/posts/${post.id}/like` %>">
+                        
+                            <button type = 'text'> Like</button>
+                        
+                        </form>
+                    </div>
+                </div>
+
+                
+            </li>
+        <% }); %>
+    </ul>
+
+
+    <%if (postList.previous) { %>
+        <a href="<%= postList.previous %>">Previous</a>
+    <% } %>
+    <%if (postList.next) { %>
+        <a href="<%= postList.next %>">Next</a>
+    <% } %>
+
+</div>
+</div>
 
 </body>
 <%- include('_footer') -%>

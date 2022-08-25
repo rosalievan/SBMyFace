@@ -1,0 +1,33 @@
+header{
+    background-color: #151820;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+}
+
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 2vw;
+}
+
+.nav a:first-child{
+    padding-left: 0;
+}
+
+.nav a:last-child{
+    padding-right: 0;
+}
+
+.nav a:hover{
+    color: #2985FF;
+}

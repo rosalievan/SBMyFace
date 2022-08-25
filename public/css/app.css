@@ -1,1 +1,52 @@
-/* Add your styles here. */
+@import './hearder2.css';
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #252A38;
+    color: white !important;
+    margin:0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.main{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    width: 100%
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    width: 100%
+}
+
+.post{
+    background-color: #151820 ;
+    margin-bottom: 4%;
+}
+
+.postinfo h2{
+
+    margin:1px;
+}
+
+.postinfo{
+    padding: 2%;
+}
+
+.image{
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .container{
+        width: 480px
+    }
+}

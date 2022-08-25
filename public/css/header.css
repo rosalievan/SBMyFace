@@ -1,0 +1,199 @@
+
+/* Add your styles here. */
+@import "/header.css";
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #252A38;
+    color: white !important;
+    margin:0;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+     padding: 2vw;
+}
+
+.centrallinks{
+    display:flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vw;
+    word-spacing: 2px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 2vw
+}
+
+a:hover{
+    color: #2985FF;
+}
+
+nav{
+    background-color: #151820;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+
+.pagename{
+    margin-left: 5vw;
+    padding-left: 5vw;
+    position: relative;
+    align-items: left;
+    text-align: left;
+    display: flex;
+    width: 80vw;
+}
+
+.post {
+    width: 80vw;
+    margin-bottom: 3vw;
+    background-color:#151820 ;
+    display:flex;
+    flex-direction: column;
+    padding-top: 0vw;
+}
+
+.footernav{
+    position: relative;
+    text-align: center;
+
+}
+
+
+.image{
+    /* width: 80vw; */
+    width: 100%;
+    padding: 0vw;
+}
+
+ul{
+    list-style-type:none;
+    padding-left: 0
+}
+
+.disliked:hover + .dislikes{
+    color: red;
+    display: block;
+    margin-left: 10vw;
+    padding-bottom: 3vw;
+}
+
+.disliked{
+    font-weight: bold;
+    color:red;
+    margin-left: 10vw;
+}
+
+.dislikes{
+    display: none;
+}
+
+.liked:hover + .likes {
+    color: green;
+    display:block;
+    margin-left: 2.5vw;
+    padding-bottom: 3vw;
+}
+
+.likes{
+    display:none
+}
+
+.liked{
+    font-weight:bold;
+    color: green;
+    margin-left: 2.5vw;
+}
+
+.likecount{
+    display:flex;
+    flex-direction: row;
+    width: 80vw;
+    grid-template-columns: 50% 50%
+
+}
+
+.poster{
+    display:flex;
+    width: 80vw;
+    margin-left: 5vw;
+    align-self:left;
+    text-align: left;
+    align-items: left;
+    margin-bottom: 1vw;
+}
+
+.message{
+    display:flex;
+    width: 80vw;
+    margin-left: 5vw;
+    align-self:left;
+    text-align: left;
+    align-items: left;
+}
+
+.date{
+    display:flex;
+    margin-left: 5vw;
+    align-self:left;
+    text-align: left;
+    align-items: left;
+    padding: 0;
+    margin-top: 0;
+}
+
+.postlist{
+    display:flex;
+    align-self: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+
+
+@media (min-width: 800px) {
+    .post{
+        width: 640px
+    }
+
+    /* .image{
+        width: 640px
+    }
+
+    .poster{
+        width: 640px
+    }
+
+    .date{
+        width: 640px
+    }
+
+    .message{
+        width: 640px
+    }
+
+    .likecount{
+        width: 640px
+    } */
+
+    .pagename{
+        width: 640px;
+        display:flex;
+        position: relative;
+        left: calc(50% - 320px);
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+}
