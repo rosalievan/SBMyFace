@@ -12,6 +12,7 @@ import { format } from "date-fns";
 const router = express.Router();
 
 router.get("/", async (request, response) => {
+  console.log(request)
   const page = request.query.page ? parseInt(request.query.page as string) : 1;
   const pageSize = request.query.pageSize
     ? parseInt(request.query.pageSize as string)
