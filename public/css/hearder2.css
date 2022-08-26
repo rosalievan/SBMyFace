@@ -5,6 +5,11 @@ header{
     display: flex;
 }
 
+.centrallinks{
+    display:flex;
+    justify-content: space-evenly;
+}
+
 .nav{
     display: flex;
     flex-direction: row;

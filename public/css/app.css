@@ -8,6 +8,19 @@ body{
     margin:0;
 }
 
+.menu{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: #151820;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+
+}
+
+
 .container{
     width: 80%;
     margin: auto;
